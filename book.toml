@@ -1,5 +1,56 @@
 [book]
+title = "DSPy Cookbook: Hands-On Patterns"
 authors = ["firoz57"]
 language = "en"
 src = "src"
-title = "DSPy Cookbook"
+
+[build]
+# Adjust build-dir if you want GitHub Pages output in ../docs/
+build-dir = "book"
+
+# --- Plugins ---
+
+[preprocessor.linkcheck]
+command = "mdbook-linkcheck"
+
+[preprocessor.section-validator]
+command = "mdbook-section-validator"
+
+[preprocessor.check-missing-md]
+command = "mdbook-check-missing-md"
+
+[preprocessor.katex]
+command = "mdbook-katex"
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+
+[preprocessor.bib]
+command = "mdbook-bib"
+
+[preprocessor.quiz]
+command = "mdbook-quiz"
+
+[preprocessor.graphviz]
+command = "mdbook-graphviz"
+
+[preprocessor.plantuml]
+command = "mdbook-plantuml"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "coal"
+copy-fonts = true
+
+[output.html.search] # built-in search
+enable = true
+
+[output.html.open-on-gh]
+command = "mdbook-open-on-gh"
+repository-url = "https://github.com/firoz57/dspy-cookbook"
